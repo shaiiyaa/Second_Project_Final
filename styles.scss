@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@900&display=swap');
+
+
+body html {
+    height: 100%;
+    min-width: 500px;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+
+.parallax {// parallax background
+    background-image: url(img/wallpaper2.jpg);
+    height: 100%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sticky {// class added from JS to navBar
+    button, a, input {
+        margin-top: 10px;
+    }
+    width:100%;
+    position:fixed;
+    background:inherit;
+    z-index:10;
+    top: 0;
+    margin-bottom: 2px;
+    padding-bottom: 5px;
+    box-shadow: 0 8px 10px -3px #222;
+}
+  
+header {
+    color: black;
+    background-color: rgba(224, 224, 224, 0.35);
+    background-image: radial-gradient(#212121 12%, transparent 12%),
+                      radial-gradient(#fafafa 8%, transparent 8%);
+    background-position: 0 0, 50px 50px;
+    background-size: 15px 15px;
+
+    border-bottom: 3px solid black;
+    
+ 
+    .header {
+        margin-left: 20px;
+        -webkit-text-stroke-width: 3px;
+        -webkit-text-stroke-color: black;
+
+        .cut-title {
+            position: absolute;
+            bottom: 0;
+
+            $random-text: 'Real-Time Crypto';
+            position: relative;
+            text-transform: uppercase;
+            color: transparent;
+            font-weight: 900;
+            font-family: 'Catamaran', sans-serif;
+            font-style: italic;
+         
+            &:after {
+                content: $random-text;
+                position: absolute;
+                left: -10px;
+                top: -2px;
+                color: white;
+                $path: polygon(0 25%, 100% 65%, 100% 100%, 0% 100%);
+                clip-path: $path;
+            }
+             
+            &:before {
+                content: $random-text;
+                position: absolute;
+                color: white;
+                $path: polygon(0 0, 110% 0, 100% 65%, 0 25%);
+                clip-path: $path;
+            }
+        }
+        img {
+           
+            
+            float: right;
+            border-bottom: 3px solid black;
+        }
+        
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    main { margin: 0% 10% 0% 10%; }
+    nav-bar { margin: 0% 10% 0% 10%; .search{ margin-right: 10%;}}
+}
+
+nav-bar {
+    
+     
+    a{
+        padding: 10px;
+        text-shadow: 0px 0px 7px black;
+        font-size: large;
+        transition: 0.3s;
+        border-radius: 5px;
+    }
+    a:hover {
+        color: #fff;
+        background-color: #007bff;
+    }
+
+    .search {
+        float: right;
+    }
+}
+
+main {
+    
+          
+    
+    display-section { 
+        .card{
+            margin: .15em;
+            text-align: center;
+            border: 2px solid rgba(0, 0, 0, 0.514);
+            transition: 0.2s;
+        }
+        
+        .card:hover { 
+            border: 2px solid rgb(0, 0, 0);
+        }    
+        
+        h5 {
+            img{
+                width: 25px;
+                height: 25px;
+            }  
+            div{
+                float: right;
+            }
+        }
+     
+        
+    }
+}
+
+
+@media only screen and (min-width: 1081px) {
+    header { height: 100px; margin-bottom: 50px;
+        .cut-title { font-size: 6em ;}
+        img { height: 100px; margin-top: 20px; }
+    }
+    .card:hover { transform: scale(1.025); }
+    // main { padding-top: 193px; }
+}
+
+@media (max-width:1080px) and (min-width:768px) {
+    header { height: 85px; margin-bottom: 30px;
+        .cut-title { font-size: 4em; top:17px}
+        img { height: 80px; margin-top: 20px; }
+    }
+    .card:hover { transform: scale(1.015); }
+    // main { padding-top: 158px; }
+}
+        
+@media (max-width:768px) and (min-width:570px) {
+    header { height: 70px; margin-bottom: 20px; 
+        .cut-title { font-size: 3em; top:17px}
+        img { height: 70px; margin-top: 20px; }
+    }
+    .card:hover {
+        transform: scale(1.007); }
+    .search { width: 100%; }
+    main { width: 100%; display: grid;
+}}
+@media (max-width: 570px) { 
+    header { height: 70px; margin-bottom: 20px;
+        .cut-title { font-size: 3em; top:17px}
+        img { display: none; }
+    }
+    .card:hover { transform: scale(1.007 ); }
+    .search { width: 100%; }
+    main { width: 100%; display: grid; }
+    // nav-bar { display: grid; }
+}
+
+        
