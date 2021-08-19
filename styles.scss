@@ -34,18 +34,16 @@ body {
     box-shadow: 0 8px 10px -3px #222;
 }
   
-header {
+header {// header back ground design
     color: black;
     background-color: rgba(224, 224, 224, 0.35);
     background-image: radial-gradient(#212121 12%, transparent 12%),
                       radial-gradient(#fafafa 8%, transparent 8%);
     background-position: 0 0, 50px 50px;
     background-size: 15px 15px;
-
     border-bottom: 3px solid black;
     
- 
-    .header {
+    .header {// site title design 
         margin-left: 20px;
         -webkit-text-stroke-width: 3px;
         -webkit-text-stroke-color: black;
@@ -53,7 +51,6 @@ header {
         .cut-title {
             position: absolute;
             bottom: 0;
-
             $random-text: 'Real-Time Crypto';
             position: relative;
             text-transform: uppercase;
@@ -80,24 +77,19 @@ header {
                 clip-path: $path;
             }
         }
-        img {
-           
-            
+        img { // coin logo
             float: right;
             border-bottom: 3px solid black;
-        }
-        
+        }    
     }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) {// big screem gaps
     main { margin: 0% 10% 0% 10%; }
     nav-bar { margin: 0% 10% 0% 10%; .search{ margin-right: 10%;}}
 }
 
-nav-bar {
-    
-     
+nav-bar {// buttons and inputs
     a{
         padding: 10px;
         text-shadow: 0px 0px 7px black;
@@ -116,11 +108,8 @@ nav-bar {
 }
 
 main {
-    
-          
-    
     display-section { 
-        .card{
+        .card{// bootstrap card alighnment
             margin: .15em;
             text-align: center;
             border: 2px solid rgba(0, 0, 0, 0.514);
@@ -139,20 +128,17 @@ main {
             div{
                 float: right;
             }
-        }
-     
-        
+        }    
     }
 }
 
-
+// visual size adjustments
 @media only screen and (min-width: 1081px) {
     header { height: 100px; margin-bottom: 50px;
         .cut-title { font-size: 6em ;}
         img { height: 100px; margin-top: 20px; }
     }
     .card:hover { transform: scale(1.025); }
-    // main { padding-top: 193px; }
 }
 
 @media (max-width:1080px) and (min-width:768px) {
@@ -161,7 +147,6 @@ main {
         img { height: 80px; margin-top: 20px; }
     }
     .card:hover { transform: scale(1.015); }
-    // main { padding-top: 158px; }
 }
         
 @media (max-width:768px) and (min-width:570px) {
@@ -182,7 +167,6 @@ main {
     .card:hover { transform: scale(1.007 ); }
     .search { width: 100%; }
     main { width: 100%; display: grid; }
-    // nav-bar { display: grid; }
 }
 
         
