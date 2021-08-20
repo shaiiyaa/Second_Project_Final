@@ -439,7 +439,7 @@ $(function () {// IIFE
         var stickyNavTop = $(".stickyNavbar").offset().top;
         function stickyNav(){
         var scrollTop = $(window).scrollTop(); 
-        if (scrollTop > stickyNavTop) { 
+        if (scrollTop > stickyNavTop - 7) { 
             $(".stickyNavbar").addClass('sticky');
         } else { $(".stickyNavbar").removeClass('sticky'); }
         };

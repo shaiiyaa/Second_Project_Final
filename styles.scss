@@ -3,7 +3,7 @@
 
 body html {
     height: 100%;
-    min-width: 500px;
+    min-width: 350px;
 }
 body {
     margin: 0;
@@ -33,7 +33,7 @@ body {
     padding-bottom: 5px;
     box-shadow: 0 8px 10px -3px #222;
 }
-  
+
 header {// header back ground design
     color: black;
     background-color: rgba(224, 224, 224, 0.35);
@@ -147,8 +147,7 @@ main {
         img { height: 80px; margin-top: 20px; }
     }
     .card:hover { transform: scale(1.015); }
-}
-        
+}       
 @media (max-width:768px) and (min-width:570px) {
     header { height: 70px; margin-bottom: 20px; 
         .cut-title { font-size: 3em; top:17px}
@@ -160,8 +159,8 @@ main {
     main { width: 100%; display: grid;
 }}
 @media (max-width: 570px) { 
-    header { height: 70px; margin-bottom: 20px;
-        .cut-title { font-size: 3em; top:17px}
+    header { height: 53px; margin-bottom: 20px;
+        .cut-title { font-size: 2em; top:17px}
         img { display: none; }
     }
     .card:hover { transform: scale(1.007 ); }
