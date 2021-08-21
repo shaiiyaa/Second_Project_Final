@@ -135,6 +135,26 @@ main display-section h5 div {
   float: right;
 }
 
+.about {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 2em;
+  color: black;
+  -webkit-text-fill-color: white;
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.about img {
+  height: 300px;
+  width: 300;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-radius: 50%;
+}
+
 @media only screen and (min-width: 1081px) {
   header {
     height: 100px;

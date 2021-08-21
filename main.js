@@ -20,10 +20,16 @@ $(function () {// IIFE
         
         $("#mostTradedBtn").on("click", ()=>{//switch between Div's | cards button
             $("#chartContainer").hide();
+            $("#aboutPage").hide();
             $("#displaySection").show();
             $(".parallax").css("height", "100%");
         });
         
+        $("#aboutBtn").on("click", ()=> {
+            $("#chartContainer").hide();
+            $("#displaySection").hide();
+            $("#aboutPage").show();
+        });
 
 
         let coin_id ;//clicked checkbox card id
@@ -311,6 +317,7 @@ $(function () {// IIFE
             }
             else {
                 $("#displaySection").hide();// switch between card and grapg section
+                $("#aboutPage").hide();// switch between card and grapg section
                 $("#chartContainer").show();
     
                 const dataCoin1 = [];
