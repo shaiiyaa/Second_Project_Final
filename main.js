@@ -192,7 +192,7 @@ $(function () {// IIFE
 
     $("#searchBtn").on("click", function() {// search click event
 
-        const input = $("#searchField").val();
+        const input = $("#searchField").val().toLowerCase();
         let found;// boolean to indicate if search match 
         let coinCounter = 0;
         for(let coin in coins) {// run through all coins
@@ -203,13 +203,16 @@ $(function () {// IIFE
                 case id:
                     ShowResult(coinCounter);
                     found = true;
+                    console.log(input+"id");
                     break
-                case symbol:
-                    ShowResult(coinCounter);
-                    found = true;
-                    break
-                case name:
-                    ShowResult(coinCounter);
+                    case symbol:
+                        ShowResult(coinCounter);
+                        console.log(input+"symbol");
+                        found = true;
+                        break
+                        case name:
+                            ShowResult(coinCounter);
+                            console.log(input+"name");
                     found = true;
                     break
             }
@@ -301,7 +304,7 @@ $(function () {// IIFE
                 $(".modal-body").hide();
                 
                 setTimeout(() => { // close modal after 2sec
-                    $("#myModal").modal('toggle');
+                    $("#myModal").modal('hide');
                     $(".modal-content").css("width", "100%")  
                     $(".modal-body").show();    
                 }, 2000);
