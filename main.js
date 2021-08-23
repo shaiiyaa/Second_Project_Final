@@ -25,7 +25,8 @@ $(function () {// IIFE
             $(".parallax").css("height", "100%");
         });
         
-        $("#aboutBtn").on("click", ()=> {
+        $("#aboutBtn").on("click", ()=> {// about page
+            $(".parallax").css("height", "100%")
             $("#chartContainer").hide();
             $("#displaySection").hide();
             $("#aboutPage").show();
